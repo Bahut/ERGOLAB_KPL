@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\userr\\.nuget\\packages\\": {},
+    "C:\\Users\\Muhammad Radhi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SE Telkom University\\Sems 4\\Konstruksi Perangkat Lunak\\TUBES KPL\\TUBES KPL.csproj",
+      "projectUniqueName": "D:\\SEM 4 KPL\\ERGOLAB_KPL\\TUBES KPL.csproj",
       "projectName": "TUBES KPL",
-      "projectPath": "D:\\SE Telkom University\\Sems 4\\Konstruksi Perangkat Lunak\\TUBES KPL\\TUBES KPL.csproj",
-      "packagesPath": "C:\\Users\\userr\\.nuget\\packages\\",
-      "outputPath": "D:\\SE Telkom University\\Sems 4\\Konstruksi Perangkat Lunak\\TUBES KPL\\obj\\",
+      "projectPath": "D:\\SEM 4 KPL\\ERGOLAB_KPL\\TUBES KPL.csproj",
+      "packagesPath": "C:\\Users\\Muhammad Radhi\\.nuget\\packages\\",
+      "outputPath": "D:\\SEM 4 KPL\\ERGOLAB_KPL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\userr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Muhammad Radhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
