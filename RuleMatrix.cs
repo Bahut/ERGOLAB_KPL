@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TUBES_KPL.Models;
 
 namespace TUBES_KPL.Core
 {
@@ -37,30 +38,18 @@ namespace TUBES_KPL.Core
             assignmentTable[K("Umum", "Sedang")] = "Unit Umum";
             assignmentTable[K("Umum", "Berat")] = "Unit Umum";
 
-            slaTable[K("Kebersihan", "Ringan")] = 3;
-            slaTable[K("Keamanan", "Sedang")] = 1;
-            slaTable[K("Infrastruktur", "Berat")] = 1;
-            slaTable[K("Administrasi", "Ringan")] = 3;
-            slaTable[K("Umum", "Sedang")] = 2;
+            SlaConfig config = ConfigLoader.Load<SlaConfig>("sla_rules.json");
+
+            foreach (var rule in config.Rules)
+            {
+                slaTable[K(rule.Category, rule.Impact)] = rule.MaxDays;
+            }
 
             escalationTable[$"{ComplaintStatus.Diajukan}|2"] = "Notifikasi ke Kabid";
             escalationTable[$"{ComplaintStatus.Diverifikasi}|3"] = "Eskalasi ke Lurah";
             escalationTable[$"{ComplaintStatus.Diproses}|4"] = "Laporan ke Camat";
 
-            notificationTable[K(ComplaintStatus.Diajukan.ToString(), "Warga")] =
-                "Laporan '{title}' telah diterima. Menunggu verifikasi.";
-
-            notificationTable[K(ComplaintStatus.Diverifikasi.ToString(), "Petugas")] =
-                "Laporan '{title}' perlu ditindaklanjuti segera.";
-
-            notificationTable[K(ComplaintStatus.Diproses.ToString(), "Warga")] =
-                "Laporan '{title}' sedang ditangani oleh {unit}.";
-
-            notificationTable[K(ComplaintStatus.Selesai.ToString(), "Warga")] =
-                "Laporan '{title}' telah selesai. Terima kasih.";
-
-            notificationTable[K(ComplaintStatus.Ditolak.ToString(), "Warga")] =
-                "Laporan '{title}' ditolak. Alasan: tidak sesuai domain.";
+            NotificationConfig notifConfig = ConfigLoader.Load<NotificationConfig>("notification_templates.json");
         }
 
         public string GetUnit(string category, string impact)

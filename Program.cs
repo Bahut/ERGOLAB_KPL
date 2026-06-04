@@ -1,7 +1,6 @@
 ﻿using System;
 using TUBES_KPL.Core;
 using TUBES_KPL.Models;
-using TUBES_KPL.Testing;
 
 namespace TUBES_KPL
 {
@@ -11,16 +10,51 @@ namespace TUBES_KPL
         {
             try
             {
+                Console.WriteLine("=== LOAD CONFIGURATION ===");
+
+                Console.WriteLine("=== DAFTAR KATEGORI PENGADUAN ===");
+
+                CategoryConfig categoryConfig = ConfigLoader.Load<CategoryConfig>("categories.json");
+
+                foreach (var category in categoryConfig.Categories)
+                {
+                    Console.WriteLine(
+                        $"{category.Id}. {category.Name}");
+                }
+
+                RoleConfig roleConfig = ConfigLoader.Load<RoleConfig>("role_permission.json");
+
+                Console.WriteLine("=== ROLE PERMISSIONS ===");
+
+                foreach (var role in roleConfig.Roles)
+                {
+                    Console.WriteLine($"\nRole: {role.Role}");
+
+                    foreach (var permission in role.Permissions)
+                    {
+                        Console.WriteLine($" - {permission}");
+                    }
+                }
+
                 Console.WriteLine("=== TABLE-DRIVEN SIMULATION ===");
 
-                Complaint complaint = new Complaint(
+                Console.WriteLine("=== GENERICS DEMO ===");
+
+                var complaint = new Complaint(
                     "Jalan Rusak",
                     "Infrastruktur",
                     "Berat",
-                    "Jalan berlubang besar di depan sekolah",
-                    "Jl. Merdeka No.10",
-                    "warga123"
-                );
+                    "Jalan berlubang",
+                    "Bandung",
+                    "Budi");
+
+                var result =
+                    Result<Complaint>.Ok(
+                        complaint,
+                        "Berhasil");
+
+                Console.WriteLine(result.Success);
+                Console.WriteLine(result.Message);
 
                 Console.WriteLine($"\nAuto-Assigned Unit : {complaint.ResponsibleUnit}");
                 Console.WriteLine($"Deadline SLA       : {complaint.DeadlineDate.ToShortDateString()}");
@@ -39,20 +73,6 @@ namespace TUBES_KPL
 
                 Console.WriteLine("\nSimulasi selesai.");
 
-                Console.WriteLine("\n====================================");
-                Console.WriteLine("TABLE DRIVEN UNIT TEST");
-                Console.WriteLine("====================================");
-                TableDrivenUnitTest.Run();
-
-                Console.WriteLine("\n====================================");
-                Console.WriteLine("PERFORMANCE TEST");
-                Console.WriteLine("====================================");
-                PerformanceTest.Run();
-
-                Console.WriteLine("\n====================================");
-                Console.WriteLine("WORKFLOW UNIT TEST");
-                Console.WriteLine("====================================");
-                UnitTestSimulation.Run();
             }
             catch (Exception ex)
             {
