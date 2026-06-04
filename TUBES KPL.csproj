@@ -23,4 +23,16 @@
 		</Content>
 	</ItemGroup>
 
+	<ItemGroup>
+		<Compile Remove="TUBES_KPL.API\**" />
+		<Content Remove="TUBES_KPL.API\**" />
+		<None Remove="TUBES_KPL.API\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="TUBES_KPL.Tests\**" />
+		<Content Remove="TUBES_KPL.Tests\**" />
+		<None Remove="TUBES_KPL.Tests\**" />
+	</ItemGroup>
+
 </Project>
