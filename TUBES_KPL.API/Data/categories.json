@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Kebersihan",
+      "icon": "trash"
+    },
+    {
+      "id": 2,
+      "name": "Keamanan",
+      "icon": "shield"
+    },
+    {
+      "id": 3,
+      "name": "Infrastruktur",
+      "icon": "road"
+    },
+    {
+      "id": 4,
+      "name": "Administrasi",
+      "icon": "document"
+    },
+    {
+      "id": 5,
+      "name": "Umum",
+      "icon": "folder"
+    }
+  ]
+}
