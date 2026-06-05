@@ -1,0 +1,29 @@
+{
+  "templates": [
+    {
+      "status": "Diajukan",
+      "recipient": "Warga",
+      "message": "Laporan '{title}' telah diterima. Menunggu verifikasi."
+    },
+    {
+      "status": "Diverifikasi",
+      "recipient": "Petugas",
+      "message": "Laporan '{title}' perlu ditindaklanjuti segera."
+    },
+    {
+      "status": "Diproses",
+      "recipient": "Warga",
+      "message": "Laporan '{title}' sedang ditangani oleh {unit}."
+    },
+    {
+      "status": "Selesai",
+      "recipient": "Warga",
+      "message": "Laporan '{title}' telah selesai. Terima kasih."
+    },
+    {
+      "status": "Ditolak",
+      "recipient": "Warga",
+      "message": "Laporan '{title}' ditolak. Alasan: tidak sesuai domain."
+    }
+  ]
+}

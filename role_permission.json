@@ -1,0 +1,20 @@
+{
+  "roles": [
+    {
+      "role": "Warga",
+      "permissions": [
+        "CreateComplaint",
+        "ViewComplaint"
+      ]
+    },
+    {
+      "role": "Admin",
+      "permissions": [
+        "CreateComplaint",
+        "ViewComplaint",
+        "VerifyComplaint",
+        "DeleteComplaint"
+      ]
+    }
+  ]
+}

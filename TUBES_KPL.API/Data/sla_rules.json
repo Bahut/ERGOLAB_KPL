@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "category": "Kebersihan",
+      "impact": "Ringan",
+      "maxDays": 3
+    },
+    {
+      "category": "Keamanan",
+      "impact": "Sedang",
+      "maxDays": 1
+    },
+    {
+      "category": "Infrastruktur",
+      "impact": "Berat",
+      "maxDays": 1
+    },
+    {
+      "category": "Administrasi",
+      "impact": "Ringan",
+      "maxDays": 3
+    },
+    {
+      "category": "Umum",
+      "impact": "Sedang",
+      "maxDays": 2
+    }
+  ]
+}
