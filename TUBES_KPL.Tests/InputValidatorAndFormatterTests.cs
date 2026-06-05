@@ -32,15 +32,12 @@ namespace ERGOLAB_KPL.Tests
         {
             try
             {
-                // Ini harusnya memicu ArgumentException karena inputnya kosong
                 _helper.SamarkanNamaPelapor("");
 
-                // Jika baris di atas tidak menghasilkan eror, berarti test ini gagal
                 Assert.Fail("Harusnya melempar ArgumentException tetapi tidak.");
             }
             catch (ArgumentException)
             {
-                // Jika berhasil menangkap ArgumentException, berarti code reuse kamu sukses bekerja!
                 return;
             }
         }

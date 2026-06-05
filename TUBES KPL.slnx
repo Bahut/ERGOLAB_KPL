@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../TUBES_KPL.API/TUBES_KPL.API.csproj" />
-  <Project Path="../TUBES_KPL.Tests/TUBES_KPL.Tests.csproj" Id="74339c70-8265-4ce3-8458-a23ef36c4ea9" />
   <Project Path="TUBES KPL.csproj" />
+  <Project Path="TUBES_KPL.API/TUBES_KPL.API.csproj" />
+  <Project Path="TUBES_KPL.Tests/TUBES_KPL.Tests.csproj" />
 </Solution>
